@@ -2,83 +2,75 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فروع أكتوبر</title>
+    <meta name="viewport" content="width=360, initial-scale=1.0"> <!-- ضبط عرض ثابت -->
+    <title>الصفحة الرئيسية</title>
     <!-- رابط لأيقونات الفونت -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* إعدادات نمطية للصفحة */
+           /* إعدادات نمطية للصفحة */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #54308B;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-    header {
-    background-color: #54308B; /* لون خلفية الهيدر */
-    padding: 5px; /* تصغير الحشو */
-    font-size: 1.5em; /* تصغير حجم النص */
-    color: صاهفث; /* لون النص في الهيدر */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل الخلفية */
-    display: flex; /* استخدام Flexbox لتنسيق المحتويات */
-    justify-content: center; /* توسيط النص */
-    align-items: center; /* توسيط النص عموديًا */
-    position: relative; /* تعيين موضع نسبي */
-    height: 60px; /* تثبيت ارتفاع الهيدر */
+            font-family: Arial, sans-serif; /* ضبط نوع الخط */
+            background-color: #ffffff; /* تغيير لون الخلفية إلى الأبيض */
+            color: #54308B; /* تغيير لون النص إلى البنفسجي */
+            margin: 0; /* إزالة الهوامش الافتراضية */
+            padding: 0; /* إزالة الحشو الافتراضي */
+            text-align: center; /* توسيط النصوص */
+            width: 400px; /* تحديد عرض ثابت للصفحة */
+            margin: auto; /* توسيط الصفحة أفقياً */
         }
 
-/* تغيير لون النص عند التمرير فوقه */
-header:hover {
-    color: #3a2a6a; /* تغيير لون النص عند التمرير فوقه */
-}
+        header {
+            background-color: #54308B; /* لون خلفية الهيدر */
+            padding: 5px; /* تصغير الحشو */
+            font-size: 1.5em; /* تصغير حجم النص */
+            color: #ffffff; /* لون النص في الهيدر */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل الخلفية */
+            display: flex; /* استخدام Flexbox لتنسيق المحتويات */
+            justify-content: space-between; /* توزيع المحتويات بالتساوي */
+            align-items: center; /* توسيط المحتويات عمودياً */
+            position: relative; /* تعيين موضع نسبي */
+            height: 50px; /* تثبيت ارتفاع الهيدر */
+        }
 
-/* أنماط للرموز الاجتماعية في الهيدر */
-.header-social-icons {
-    display: flex; /* استخدام Flexbox لتنسيق الأيقونات الاجتماعية */
-    gap: 10px; /* المسافة بين الأيقونات */
-    position: absolute; /* وضع الأيقونات بشكل مطلق */
-    left: 10px; /* المسافة من حافة الهيدر اليمنى */
-}
+        /* أنماط للرموز الاجتماعية في الهيدر */
+        .header-social-icons {
+            display: flex; /* استخدام Flexbox لتنسيق الأيقونات الاجتماعية */
+            gap: 10px; /* المسافة بين الأيقونات */
+            position: absolute; /* وضع الأيقونات بشكل مطلق */
+            left: 10px; /* المسافة من حافة الهيدر اليمنى */
+        }
 
-/* أنماط للأيقونات الاجتماعية في الهيدر */
-.header-social-icons a {
-    color: #54308B; /* لون الأيقونات الاجتماعية */
-    font-size: 1.5em; /* حجم الأيقونات الاجتماعية */
-    text-decoration: none; /* إزالة التسطير من الروابط */
-}
+        /* أنماط للأيقونات الاجتماعية في الهيدر */
+        .header-social-icons a {
+            color: #ffffff; /* لون الأيقونات الاجتماعية */
+            font-size: 0.7em; /* حجم الأيقونات الاجتماعية */
+            text-decoration: none; /* إزالة التسطير من الروابط */
+        }
 
-/* تغيير لون الأيقونات الاجتماعية عند التمرير فوقها */
-.header-social-icons a:hover {
-    color: #3a2a6a; /* تغيير لون الأيقونات عند التمرير فوقها */
-}
-        /* إعدادات نمطية لشعار الأكاديمية */
+        /* تغيير لون الأيقونات الاجتماعية عند التمرير فوقها */
+        .header-social-icons a:hover {
+            color: #3a2a6a; /* تغيير لون الأيقونات عند التمرير فوقها */
+        }
+
+          /* إعدادات نمطية لشعار الأكاديمية */
         .logo {
             position: absolute;
-            left: 710px; /* يمكنك تعديل هذا الموقع حسب رغبتك */
-            top: 50%;
+            right: -10px; /* يمكنك تعديل هذا الموقع حسب رغبتك */
+            top: 55%;
             transform: translateY(-50%);
         }
         .logo img {
-            height: 140px; /* تكبير الشعار */
-            max-height: 100px; /* تكبير الحد الأقصى لارتفاع الشعار */
+            height: 120px; /* تكبير الشعار */
+            max-height: 70px; /* تكبير الحد الأقصى لارتفاع الشعار */
         }
+
         /* إعدادات نمطية لعنوان الرأسية */
         .header-title {
             flex-grow: 1;
             text-align: center;
+            margin: 0 20px; /* حافة لتفادي تداخل العناصر */
         }
-        /* إعدادات نمطية لأيقونات التواصل الاجتماعي في الرأسية */
-        .header-social-icons {
-            display: flex;
-            gap: 10px;
-        }
-        .header-social-icons a {
-            color: white;
-            font-size: 1em;
-            text-decoration: none;
-        }
+
         /* إعدادات نمطية لشريط التنقل */
         nav {
             background-color: #ffffff;
@@ -86,16 +78,21 @@ header:hover {
             justify-content: center;
             padding: 5px 0; /* تصغير الحشو */
         }
+
         nav a {
             color: #54308B;
             text-decoration: none;
             padding: 5px 10px; /* تصغير الحشو */
             font-size: 0.8em; /* تصغير حجم النص */
+            font-weight: bold; /* جعل النص bold */ 
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للنص */
         }
+
         nav a:hover {
             background-color: #e99650;
             border-radius: 5px;
         }
+
         /* إعدادات نمطية للكاروسيل */
         .carousel {
             position: relative;
@@ -104,20 +101,24 @@ header:hover {
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .carousel img {
             width: 100%;
             height: auto;
             display: none;
         }
+
         .carousel img.active {
             display: block;
         }
+
         /* إعدادات نمطية لمحتوى الصفحة */
         .container {
             padding: 20px;
             max-width: 100px;
             margin: auto;
         }
+
         .card {
             background-color: #ffffff;
             color: #54308B;
@@ -127,61 +128,66 @@ header:hover {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: right;
         }
+
         .card h2 {
             margin-top: 0;
         }
+
         .card img {
             width: 100%;
             max-width: 100px;
             height: auto;
             border-radius: 10px;
         }
-/* إعدادات نمطية للجزء السفلي من الصفحة */
-.footer {
-    background-color: #F6AE68; /* لون خلفية الفوتر */
-    height: 40px; /* تحديد ارتفاع الفوتر */
-    padding: 2px; /* حشو الفوتر */
-    text-align: center; /* توسيط النص */
-    color: #54308B; /* لون النص في الفوتر */
-    position: relative; /* تعيين موضع نسبي */
-    transition: background-color 0.3s; /* تأثير انتقالي لتغيير لون الخلفية */
-}
 
-/* تغيير لون خلفية الفوتر عند التمرير فوقه */
-.footer:hover {
-    background-color: #e99650; /* تغيير لون خلفية الفوتر عند التمرير فوقه */
-}
+        /* إعدادات نمطية للجزء السفلي من الصفحة */
+        .footer {
+            background-color: #F6AE68; /* لون خلفية الفوتر */
+            height: 40px; /* تحديد ارتفاع الفوتر */
+            padding: 2px; /* حشو الفوتر */
+            text-align: center; /* توسيط النص */
+            color: #54308B; /* لون النص في الفوتر */
+            position: relative; /* تعيين موضع نسبي */
+            transition: background-color 0.3s; /* تأثير انتقالي لتغيير لون الخلفية */
+        }
 
-/* إعدادات روابط الفوتر */
-.footer a {
-    color: #54308B; /* لون الروابط */
-    text-decoration: none; /* إزالة التسطير من الروابط */
-    margin: 5px; /* المسافة حول الروابط */
-    font-size: 1.5em; /* حجم النص في الروابط */
-    transition: color 0.3s; /* تأثير انتقالي لتغيير لون الروابط */
-}
+        /* تغيير لون خلفية الفوتر عند التمرير فوقه */
+        .footer:hover {
+            background-color: #e99650; /* تغيير لون خلفية الفوتر عند التمرير فوقه */
+        }
 
-/* تغيير لون الروابط في الفوتر عند التمرير فوقها */
-.footer a:hover {
-    color: #3a2a6a; /* تغيير لون الروابط عند التمرير فوقها */
-}
+        /* إعدادات روابط الفوتر */
+        .footer a {
+            color: #54308B; /* لون الروابط */
+            text-decoration: none; /* إزالة التسطير من الروابط */
+            margin: 5px; /* المسافة حول الروابط */
+            font-size: 1.5em; /* حجم النص في الروابط */
+            transition: color 0.3s; /* تأثير انتقالي لتغيير لون الروابط */
+        }
 
-/* إعدادات الأيقونات الاجتماعية في الفوتر */
-.footer .social-icons {
-    margin-top: 5px; /* المسافة من النص إلى الأيقونات الاجتماعية */
-}
+        /* تغيير لون الروابط في الفوتر عند التمرير فوقها */
+        .footer a:hover {
+            color: #3a2a6a; /* تغيير لون الروابط عند التمرير فوقها */
+        }
 
-/* إعدادات الأيقونات الاجتماعية في الفوتر */
-.footer .social-icons a {
-    color: white; /* لون الأيقونات الاجتماعية */
-    font-size: 1.5em; /* حجم الأيقونات الاجتماعية */
-    text-decoration: none; /* إزالة التسطير من الروابط */
-    transition: color 0.3s; /* تأثير انتقالي لتغيير لون الأيقونات */
-}
+        /* إعدادات الأيقونات الاجتماعية في الفوتر */
+        .footer .social-icons {
+            margin-top: 5px; /* المسافة من النص إلى الأيقونات الاجتماعية */
+        }
 
-/* تغيير لون الأيقونات الاجتماعية عند التمرير فوقها */
-.footer .social-icons a:hover {
-    color: #3a2a6a; /* تغيير لون الأيقونات عند التمرير فوقها */
+        /* إعدادات الأيقونات الاجتماعية في الفوتر */
+        .footer .social-icons a {
+            color: white; /* لون الأيقونات الاجتماعية */
+            font-size: 1.5em; /* حجم الأيقونات الاجتماعية */
+            text-decoration: none; /* إزالة التسطير من الروابط */
+            transition: color 0.3s; /* تأثير انتقالي لتغيير لون الأيقونات */
+        }
+
+        /* تغيير لون الأيقونات الاجتماعية عند التمرير فوقها */
+        .footer .social-icons a:hover {
+            color: #3a2a6a; /* تغيير لون الأيقونات عند التمرير فوقها */
+        }
+
         .sub-branch a {
             display: inline-block;
             background-color: #F6AE68;
@@ -193,41 +199,113 @@ header:hover {
             font-size: 1.2em;
             margin: 5px;
         }
+
         .sub-branch a:hover {
             background-color: #e99650;
         }
+
         .branch {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        /* إعدادات نمطية خاصة بالشاشات الصغيرة */
-        @media only screen and (max-width: 768px) {
-            .carousel {
-                height: 100vh;
-            }
-            .carousel img {
-                height: 100%;
-                object-fit: cover;
-            }
+
+        /* إعدادات خاصة لقسم عن الأكاديمية */
+        .about {
+            display: flex;
+            align-items: center;
+            text-align: right;
+            margin: 20px 0;
+        }
+
+        .about img {
+            width: 100px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        /* إعدادات خاصة لقسم الأسئلة الشائعة */
+        .faq {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .faq-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .faq-item {
+            background-color: #ffffff;
+            color: #54308B;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: right;
+        }
+
+        /* إعدادات نمطية لزر عرض المزيد */
+        .faq-more {
+            background-color: #F6AE68;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .faq-more:hover {
+            background-color: #e99650;
+        }
+
+        /* إعدادات لزر CTA ثابت */
+        .cta-button {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            background-color: #F6AE68;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e99650;
+        }
+
+        .cta-button i {
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- رأسية الصفحة -->
+    <!-- رأس الصفحة -->
     <header>
-        <!-- شعار الأكاديمية -->
+   <!-- شعار الأكاديمية -->
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <img src="RSCA_Crest_white.png" alt="Logo">
         </div>
-        <!-- عنوان الرأسية -->
         <div class="header-title">أكاديمية أندرلخت</div>
         <!-- أيقونات التواصل الاجتماعي -->
         <div class="header-social-icons">
-            <a href="https://www.facebook.com/YourPage" target="_blank" title="فيسبوك">
+            <a href="https://www.facebook.com/profile.php?id=100093608220798&mibextid=JRoKGi" target="_blank" title="فيسبوك">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/YourProfile" target="_blank" title="إنستغرام">
+            <a href="https://www.instagram.com/anderlecht.academy?igsh=MWxoYWpqbWcza3M2Mg%3D%3D&utm_source=qr" target="_blank" title="إنستغرام">
                 <i class="fab fa-instagram"></i>
             </a>
             <a href="https://wa.me/01115222020" target="_blank" title="واتساب">
@@ -238,13 +316,10 @@ header:hover {
     
     <!-- شريط التنقل -->
     <nav>
-        <a href="zayed.html">فروع منطقة الشيخ زايد</a>
-        <a href="october.html">فروع منطقة أكتوبر</a>
-        <a href="hoctober.html">فروع منطقة حدائق أكتوبر</a>
-        <a href="haram.html">فروع منطقة الهرم وفيصل</a>
-        <a href="maadi.html">فروع منطقة المعادي وحلوان</a>
-        <a href="cairo_tagamo.html">فروع منطقة القاهرة والتجمع</a>
-        <a href="governorates.html">فروع المحافظات</a>
+        <a href="#about">عن الأكاديمية</a>
+        <a href="#branches">فروعنا</a>
+        <a href="#contact">تواصل معنا</a>
+        <a href="#faq">الأسئلة الشائعة</a>
     </nav>
 
     <!-- قسم الكاروسيل -->
@@ -256,14 +331,70 @@ header:hover {
         <img src="file:///E:/m.n2/APP/%D9%83%D9%86%20%D8%AC%D8%B2%D8%A1%D8%A7%D9%8B.jpg" alt="Image 5">
     </div>
 
-    <!-- قسم الجزء السفلي من الصفحة -->
-    <div class="footer">
-        <p>&copy; 2024 أكاديمية أندرلخت.r جميع الحقوق محفوظة.</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/YourPage" target="_blank" title="فيسبوك">
+    <!-- قسم عن الأكاديمية -->
+    <section id="about" class="about">
+        <img src="داخلي عن الاكاديمية.jpg" alt="About Us Image">
+
+
+        <div class="about-text">
+            <h2>عن الأكاديمية</h2>
+            <p>أكاديمية أندرلخت تقدم أفضل التدريبات للاعبين الشباب وتساعدهم على تحقيق أحلامهم الرياضية.</p>
+        </div>
+    </section>
+
+    <!-- قسم فروعنا -->
+    <section id="branches" class="branch">
+        <h2>فروعنا</h2>
+اختار الفرع 
+        <div class="sub-branch">
+            <a href="zayed.html">فروع الشيخ زايد</a>
+            <a href="october.html">فروع أكتوبر</a>
+            <a href="hoctober.html">فروع حدائق أكتوبر</a>
+            <a href="haram.html">فروع الهرم وفيصل</a>
+            <a href="maadi.html">فروع المعادي وحلوان</a>
+            <a href="cairo.html">فروع القاهرة والتجمع</a>
+            <a href="gover.html">فروع المحافظات</a>
+        </div>
+    </section>
+
+    <!-- قسم تواصل معنا -->
+    <section id="contact">
+        <h2>تواصل معنا</h2>
+        <div class="header-social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100093608220798&mibextid=JRoKGi" target="_blank" title="فيسبوك">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/YourProfile" target="_blank" title="إنستغرام">
+            <a href="https://www.instagram.com/anderlecht.academy?igsh=MWxoYWpqbWcza3M2Mg%3D%3D&utm_source=qr" target="_blank" title="إنستغرام">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/01115222020" target="_blank" title="واتساب">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <p>للتواصل معنا، يرجى الاتصال على الأرقام التالية:</p>
+        <p><a href="tel:+01206171717">01206171717</a> - <a href="tel:+01115222020">01115222020</a></p>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section id="faq" class="faq">
+        <div class="faq-icon">
+            <i class="fas fa-question-circle"></i>
+        </div>
+        <h2>الأسئلة الشائعة</h2>
+        <div class="faq-item">
+            <h3>كيف يمكنني التسجيل في الأكاديمية؟</h3>
+            <p>عن طريق التسجيل في الاستمارة</p>
+        <a href="faq.html" class="faq-more">عرض المزيد من الاسئلة الشائعة</a>
+    </section>
+
+    <!-- قسم الجزء السفلي من الصفحة -->
+    <div class="footer">
+        <p>&copy; 2024 أكاديمية أندرلخت. جميع الحقوق محفوظة.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100093608220798&mibextid=JRoKGi" target="_blank" title="فيسبوك">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/anderlecht.academy?igsh=MWxoYWpqbWcza3M2Mg%3D%3D&utm_source=qr" target="_blank" title="إنستغرام">
                 <i class="fab fa-instagram"></i>
             </a>
             <a href="https://wa.me/01115222020" target="_blank" title="واتساب">
@@ -271,6 +402,14 @@ header:hover {
             </a>
         </div>
     </div>
+
+    <!-- زر CTA ثابت -->
+    <a href="tel:+01115222020" class="cta-button">
+        <i class="fas fa-phone-alt"></i>
+    <a href="tel:+01206171717" class="cta-button">
+        <i class="fas fa-phone-alt"></i>
+        اتصل بنا
+    </a>
 
     <script>
         // JavaScript لإدارة وظيفة الكاروسيل
@@ -293,4 +432,4 @@ header:hover {
         setInterval(nextImage, 3000);
     </script>
 </body>
-</html> 
+</html>
