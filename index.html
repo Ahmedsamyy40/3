@@ -50,8 +50,8 @@
 
         .logo {
             position: absolute;
-            right: 10px;
-            top: 50%;
+            right: -10px;
+            top: 55%;
             transform: translateY(-50%);
         }
         .logo img {
@@ -362,40 +362,47 @@
 
 
         .faq {
-            text-align: center;
-            margin: 20px 0;
-        }
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px; /* أضف حشوة لتوفير مساحة حول المحتوى */
+    background-color: #f0f0f0; /* إضافة خلفية لتمييز القسم */
+    border-radius: 10px; /* إضافة زوايا دائرية للخلفية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف لإبراز القسم */
+}
+
 .faq-icon {
     font-size: 2em;
     margin-bottom: 10px;
     color: grey; /* تغيير لون الأيقونة */
 }
 
-        .faq-item {
-            background-color: #ffffff;
-            color: #54308B;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: right;
-        }
+.faq-item {
+    background-color: #ffffff;
+    color: #54308B;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: right;
+}
 
-        .faq-more {
-            background-color: #F6AE68;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: block;
-            margin: 20px auto 0 auto;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
+/* موضع "عرض المزيد من الأسئلة الشائعة" */
+.faq-more {
+    background-color: #F6AE68;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px; /* وضع المسافة بين الأسئلة و"عرض المزيد" */
+    font-size: 1em;
+    transition: background-color 0.9s;
+}
 
-        .faq-more:hover {
-            background-color: #e99650;
-        }
+.faq-more:hover {
+    background-color: #e99650;
+}
+
 
         .cta-button {
             position: fixed;
@@ -522,8 +529,7 @@
 </section>
 
 
-
-   <!-- قسم الأسئلة الشائعة -->
+<!-- قسم الأسئلة الشائعة -->
 <section id="faq" class="faq">
     <a href="faq.html" class="faq-icon">
         <i class="fas fa-question-circle"></i>
@@ -535,6 +541,8 @@
     </div>
     <a href="faq.html" class="faq-more">عرض المزيد من الأسئلة الشائعة</a>
 </section>
+
+
 
 
 <!-- الجزء السفلي من الصفحة -->
@@ -553,7 +561,6 @@
     <a href="tel:01020008466" class="cta-button">
         <i class="fas fa-phone"></i>
     </a>
-
 
 
 
