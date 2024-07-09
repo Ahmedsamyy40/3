@@ -47,7 +47,6 @@
         .header-social-icons a:hover {
             color: #3a2a6a;
         }
-        
 
         .logo {
             position: absolute;
@@ -70,7 +69,14 @@
             background-color: #ffffff;
             display: flex;
             justify-content: center;
-            padding: 10px 0;
+            padding: 5px 0;
+            position: sticky; /* جعل شريط التنقل يثبت في أعلى الصفحة */
+            top: 0; /* وضعه في أعلى الصفحة */
+            left: 0;
+            width: 100%; /* ملء العرض الكامل للصفحة */
+            box-shadow: 0 2px 4px rgba(0, 0, 0,2); /* إضافة ظل خفيف أسفل شريط التنقل */
+            z-index: 1000; /* التأكد من أن شريط التنقل فوق العناصر الأخرى */
+            margin-top: 5px; /* مسافة بين الهيدر وشريط التنقل */
         }
 
         nav a {
@@ -86,8 +92,6 @@
             background-color: #e99650;
             border-radius: 5px;
         }
-
-
 /* إعدادات نمطية للجزء السفلي من الصفحة */
 .footer {
     background-color: #F6AE68; /* لون خلفية الفوتر */
@@ -232,12 +236,14 @@
         }
 
         .about img {
-            max-width: 300px; /* Added to control the size of the image */
-            max-height: 300px; /* Added to control the size of the image */
-  
-            margin-left : 50px;
-            transition: transform 0.3s;
-        }
+    max-width: 100%;       /* Adjust to make the image responsive */
+    height: auto;         /* Maintain the aspect ratio */
+    border: 1px solid #333; /* Border around the image */
+    padding: 10px;       /* Space between the image and the border */
+    box-sizing: border-box; /* Include the border and padding in the image's size */
+    margin-left: 50px;
+    transition: transform 0.3s;
+}
 
         .about img:hover {
             transform: scale(1.1);
@@ -254,7 +260,7 @@
         }
 .about img {
     max-width: 300px; /* Added to control the size of the image */
-    max-height: 300px; /* Added to control the size of the image */
+    max-height: 800px; /* Added to control the size of the image */
     margin-left: 50px;
     transition: transform 0.3s;
 }
@@ -348,7 +354,7 @@
 }
 
 .contact-numbers a {
-    color: #000000; /* لون أرقام التواصل إلى الأسود */
+    color: purple; /* لون أرقام التواصل إلى الأسود */
     text-decoration: none; /* إزالة التسطير من الروابط */
     font-weight: bold; /* جعل النص داخل الروابط عريضاً */
 }
@@ -358,6 +364,39 @@
 }
 
 
+/* تصميم قسم التسجيل */
+.register {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+.register h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.register p {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.mobile-view {
+    width: 100%;
+    height: auto;
+}
+
+.mobile-view iframe {
+    width: 100%;
+    height: 1000px;
+    border: none;
+}
 
 
 
@@ -396,7 +435,8 @@
     border-radius: 5px;
     display: inline-block;
     margin-top: 20px; /* وضع المسافة بين الأسئلة و"عرض المزيد" */
-    font-size: 1em;
+    font-size: 1.2em;
+     font-weight: bold;
     transition: background-color 0.9s;
 }
 
@@ -440,9 +480,33 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 1.2em;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .header-social-icons {
+                left: 5px;
+            }
+
+            .carousel {
+                height: 400px;
+            }
+        }
+
     </style>
 </head>
 <body>
+
+
+
     <!-- Header section -->
     <header>
         <div class="logo">
@@ -464,19 +528,25 @@
 
     <!-- Navigation bar -->
     <nav>
+        <a href="last.html">الرئيسية</a>
         <a href="#about">عن الأكاديمية</a>
         <a href="#branches">فروعنا</a>
         <a href="#contact">تواصل معنا</a>
         <a href="#faq">الأسئلة الشائعة</a>
+
     </nav>
 
     <!-- Main container -->
     <div class="container">
 
   <div class="carousel">
-        <img src="image1.jpg" alt="Slide 1" class="active">
-        <img src="image2.jpeg" alt="Slide 2">
-        <img src="الكباتن.jpg" alt="Slide 3">
+        <img src="الكباتن.jpg" alt="Slide 1" class="active">
+        <img src="احترف تقنيات كرة القدم.jpg" alt="Slide 2">
+        <img src="اعداد بدني وفني.jpg" alt="Slide 3">
+       <img src="حلمك يبدأ هنا.jpg" alt="Slide 4">
+      <img src="كارنيه طبي.jpg" alt="Slide 5">
+      <img src="كن جزءاً.jpg" alt="Slide 6">
+
         <button class="carousel-control prev-slide"><i class="fas fa-chevron-left"></i></button>
         <button class="carousel-control next-slide"><i class="fas fa-chevron-right"></i></button>
     </div>
@@ -491,7 +561,7 @@
 
         <!-- About section -->
 <section id="about" class="about">
-    <img src="image1.jpg" alt="About Us Image" onclick="toggleImageSize(this)">
+    <img src="داخلي عن الاكاديمية.jpg" alt="About Us Image" onclick="toggleImageSize(this)">
     <div class="about-text">
         <h2>عن الأكاديمية</h2>
         <p>أكاديمية أندرلخت تقدم أفضل التدريبات للاعبين الشباب وتساعدهم على تحقيق أحلامهم الرياضية.</p>
