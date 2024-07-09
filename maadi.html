@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ضبط العرض ليكون مرن -->
+    <title>فروع المعادي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #54308B;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            max-width: 100%;
+            margin: auto;
+        }
+
+           header {
+            background-color: #54308B; /* لون خلفية الهيدر */
+            padding: 5px; /* تصغير الحشو */
+            font-size: 1.5em; /* تصغير حجم النص */
+            color: #ffffff; /* لون النص في الهيدر */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل الخلفية */
+            display: flex; /* استخدام Flexbox لتنسيق المحتويات */
+            justify-content: space-between; /* توزيع المحتويات بالتساوي */
+            align-items: center; /* توسيط المحتويات عمودياً */
+            position: relative; /* تعيين موضع نسبي */
+            height: 50px; /* تثبيت ارتفاع الهيدر */
+        }
+
+
+        .header-social-icons {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            left: 10px;
+        }
+
+        .header-social-icons a {
+            color: #ffffff;
+            font-size: 1em;
+            text-decoration: none;
+        }
+
+        .header-social-icons a:hover {
+            color: #3a2a6a;
+        }
+
+        .logo {
+            position: absolute;
+            right: -10px;
+            top: 55%;
+            transform: translateY(-50%);
+        }
+        .logo img {
+            height: 70px;
+            max-height: 70px;
+        }
+
+        .header-title {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0 20px;
+        }
+
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #54308B;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a:hover {
+            background-color: #e99650;
+            border-radius: 5px;
+        }
+
+
+/* إعدادات نمطية للجزء السفلي من الصفحة */
+.footer {
+    background-color: #F6AE68; /* لون خلفية الفوتر */
+    height: 30px; /* تحديد ارتفاع الفوتر */
+    padding: 5; /* إزالة الحشو */
+    text-align: center; /* توسيط النص */
+    color: #54308B; /* لون النص في الفوتر */
+    position: relative; /* تعيين موضع نسبي */
+    bottom: 0; /* التأكد من أن الفوتر في الأسفل */
+    width: 100%; /* عرض الفوتر ليشمل كامل الصفحة */
+    box-sizing: border-box; /* تضمين الحشو والحدود في الحجم الكلي */
+    transition: background-color 0.3s; /* تأثير انتقالي لتغيير لون الخلفية */
+}
+
+/* تغيير لون خلفية الفوتر عند التمرير فوقه */
+.footer:hover {
+    background-color: #e99650; /* تغيير لون خلفية الفوتر عند التمرير فوقه */
+}
+
+/* إعدادات نص الفوتر */
+.footer p {
+    margin: 0; /* إزالة الهوامش */
+    padding: 0; /* إزالة الحشو */
+    line-height: 15px; /* تعيين ارتفاع السطر ليكون في وسط الفوتر */
+    font-size: 0.9em; /* حجم النص في الفوتر */
+    color: #54308B; /* لون النص */
+}
+
+/* إعدادات روابط الفوتر */
+.footer a {
+    color: #54308B; /* لون الروابط */
+    text-decoration: none; /* إزالة التسطير من الروابط */
+    margin: 0 10px; /* المسافة حول الروابط */
+    font-size: 1em; /* حجم النص في الروابط */
+    transition: color 0.3s; /* تأثير انتقالي لتغيير لون الروابط */
+}
+
+/* تغيير لون الروابط في الفوتر عند التمرير فوقها */
+.footer a:hover {
+    color: #3a2a6a; /* تغيير لون الروابط عند التمرير فوقها */
+}
+
+/* إعدادات الأيقونات الاجتماعية في الفوتر */
+.footer .social-icons {
+    margin-top: 5px; /* المسافة من النص إلى الأيقونات الاجتماعية */
+}
+
+/* إعدادات الأيقونات الاجتماعية في الفوتر */
+.footer .social-icons a {
+    color: #3a2a6a; /* لون الأيقونات الاجتماعية */
+    font-size: 1.5em; /* حجم الأيقونات الاجتماعية */
+    text-decoration: none; /* إزالة التسطير من الروابط */
+    transition: color 0.3s; /* تأثير انتقالي لتغيير لون الأيقونات */
+}
+
+/* تغيير لون الأيقونات الاجتماعية عند التمرير فوقها */
+.footer .social-icons a:hover {
+    color: #54308B; /* تغيير لون الأيقونات عند التمرير فوقها */
+}
+
+
+
+
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .card {
+            background-color: #ffffff;
+            color: #54308B;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .footer {
+            background-color: #F6AE68;
+            padding: 10px;
+            text-align: center;
+            color: #54308B;
+            position: relative;
+        }
+        .footer a {
+            color: #54308B;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+        .footer a:hover {
+            color: #3a2a6a;
+        }
+        .footer .social-icons {
+            margin-top: 10px;
+        }
+        .sub-branch a {
+            display: inline-block;
+            background-color: #F6AE68;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1.2em;
+            margin: 5px;
+        }
+        .sub-branch a:hover {
+            background-color: #e99650;
+        }
+        .branch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+
+    <!-- Header section -->
+    <header>
+        <div class="logo">
+            <img src="RSCA_Crest_white.png" alt="Logo">
+        </div>
+        <div class="header-title">أكاديمية أندرلخت</div>
+        <div class="header-social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100093608220798&mibextid=JRoKGi" target="_blank" title="فيسبوك">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/anderlecht.academy?igsh=MWxoYWpqbWcza3M2Mg%3D%3D&utm_source=qr" target="_blank" title="إنستجرام">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/01020008466" target="_blank" title="واتساب">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+         <a href="last.html">الرئيسية</a>
+        <a href="#about">عن الأكاديمية</a>
+        <a href="#branches">فروعنا</a>
+        <a href="#contact">تواصل معنا</a>
+        <a href="#faq">الأسئلة الشائعة</a>
+    </nav>
+
+    <!-- Main container -->
+
+<!-- Maadi Branches -->
+<div class="branch">
+    <h2>فروع المعادي</h2>
+    <div class="sub-branch">
+        <a href="https://wa.me/p/7773617409335519/201115222020" target="_blank">ملاعب Levels المعادي</a>
+    </div>
+    <div class="sub-branch">
+        <a href="https://wa.me/p/7390354027685656/201115222020" target="_blank">مدرسة منهاتن المعادي</a>
+    </div>
+    <div class="sub-branch">
+        <a href="https://wa.me/p/7848018071897494/201115222020" target="_blank">فيوتشر المعادي</a>
+    </div>
+    <div class="sub-branch">
+        <a href="https://wa.me/p/7444684765649069/201115222020" target="_blank">دجلة سمارت</a>
+    </div>
+    <div class="sub-branch">
+        <a href="https://wa.me/p/8392305957464458/201115222020" target="_blank">ملاعب التصنيع (حلوان)</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- الجزء السفلي من الصفحة -->
+<footer class="footer">
+    <p>© 2024 أكاديمية أندرلخت. جميع الحقوق محفوظة.</p>
+    <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100093608220798&mibextid=JRoKGi" target="_blank" title="فيسبوك">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/anderlecht.academy?igsh=MWxoYWpqbWcza3M2Mg%3D%3D&utm_source=qr" target="_blank" title="إنستجرام">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/01020008466" target="_blank" title="واتساب">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+    </div>
+</footer>
+</body>
+</html>
+

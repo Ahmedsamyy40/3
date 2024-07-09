@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ضبط العرض ليكون مرن -->
+    <title>الأسئلة الشائعة </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #54308B;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            max-width: 100%;
+            margin: auto;
+        }
+
+           header {
+            background-color: #54308B; /* لون خلفية الهيدر */
+            padding: 5px; /* تصغير الحشو */
+            font-size: 1.5em; /* تصغير حجم النص */
+            color: #ffffff; /* لون النص في الهيدر */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل الخلفية */
+            display: flex; /* استخدام Flexbox لتنسيق المحتويات */
+            justify-content: space-between; /* توزيع المحتويات بالتساوي */
+            align-items: center; /* توسيط المحتويات عمودياً */
+            position: relative; /* تعيين موضع نسبي */
+            height: 50px; /* تثبيت ارتفاع الهيدر */
+        }
+
+
+        .header-social-icons {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            left: 10px;
+        }
+
+        .header-social-icons a {
+            color: #ffffff;
+            font-size: 1em;
+            text-decoration: none;
+        }
+
+        .header-social-icons a:hover {
+            color: #3a2a6a;
+        }
+
+        .logo {
+            position: absolute;
+            right: -10px;
+            top: 55%;
+            transform: translateY(-50%);
+        }
+        .logo img {
+            height: 70px;
+            max-height: 70px;
+        }
+
+        .header-title {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0 20px;
+        }
+
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #54308B;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a:hover {
+            background-color: #e99650;
+            border-radius: 5px;
+        }
+
+
+/* إعدادات نمطية للجزء السفلي من الصفحة */
+.footer {
+    background-color: #F6AE68; /* لون خلفية الفوتر */
+    height: 30px; /* تحديد ارتفاع الفوتر */
+    padding: 5; /* إزالة الحشو */
+    text-align: center; /* توسيط النص */
+    color: #54308B; /* لون النص في الفوتر */
+    position: relative; /* تعيين موضع نسبي */
+    bottom: 0; /* التأكد من أن الفوتر في الأسفل */
+    width: 100%; /* عرض الفوتر ليشمل كامل الصفحة */
+    box-sizing: border-box; /* تضمين الحشو والحدود في الحجم الكلي */
+    transition: background-color 0.3s; /* تأثير انتقالي لتغيير لون الخلفية */
+}
+
+/* تغيير لون خلفية الفوتر عند التمرير فوقه */
+.footer:hover {
+    background-color: #e99650; /* تغيير لون خلفية الفوتر عند التمرير فوقه */
+}
+
+/* إعدادات نص الفوتر */
+.footer p {
+    margin: 0; /* إزالة الهوامش */
+    padding: 0; /* إزالة الحشو */
+    line-height: 15px; /* تعيين ارتفاع السطر ليكون في وسط الفوتر */
+    font-size: 0.9em; /* حجم النص في الفوتر */
+    color: #54308B; /* لون النص */
+}
+
+/* إعدادات روابط الفوتر */
+.footer a {
+    color: #54308B; /* لون الروابط */
+    text-decoration: none; /* إزالة التسطير من الروابط */
+    margin: 0 10px; /* المسافة حول الروابط */
+    font-size: 1em; /* حجم النص في الروابط */
+    transition: color 0.3s; /* تأثير انتقالي لتغيير لون الروابط */
+}
+
+/* تغيير لون الروابط في الفوتر عند التمرير فوقها */
+.footer a:hover {
+    color: #3a2a6a; /* تغيير لون الروابط عند التمرير فوقها */
+}
+
+/* إعدادات الأيقونات الاجتماعية في الفوتر */
+.footer .social-icons {
+    margin-top: 5px; /* المسافة من النص إلى الأيقونات الاجتماعية */
+}
+
+/* إعدادات الأيقونات الاجتماعية في الفوتر */
+.footer .social-icons a {
+    color: #3a2a6a; /* لون الأيقونات الاجتماعية */
+    font-size: 1.5em; /* حجم الأيقونات الاجتماعية */
+    text-decoration: none; /* إزالة التسطير من الروابط */
+    transition: color 0.3s; /* تأثير انتقالي لتغيير لون الأيقونات */
+}
+
+/* تغيير لون الأيقونات الاجتماعية عند التمرير فوقها */
+.footer .social-icons a:hover {
+    color: #54308B; /* تغيير لون الأيقونات عند التمرير فوقها */
+}
+
+
+
+
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .card {
+            background-color: #ffffff;
+            color: #54308B;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .footer {
+            background-color: #F6AE68;
+            padding: 10px;
+            text-align: center;
+            color: #54308B;
+            position: relative;
+        }
+        .footer a {
+            color: #54308B;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+        .footer a:hover {
+            color: #3a2a6a;
+        }
+        .footer .social-icons {
+            margin-top: 10px;
+        }
+        .sub-branch a {
+            display: inline-block;
+            background-color: #F6AE68;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1.2em;
+            margin: 5px;
+        }
+        .sub-branch a:hover {
+            background-color: #e99650;
+        }
+        .branch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+    <!-- Header section -->
+    <header>
+        <div class="logo">
+            <img src="RSCA_Crest_white.png" alt="Logo">
+        </div>
+        <div class="header-title">أكاديمية أندرلخت</div>
+        <div class="header-social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100093608220798&mibextid=JRoKGi" target="_blank" title="فيسبوك">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/anderlecht.academy?igsh=MWxoYWpqbWcza3M2Mg%3D%3D&utm_source=qr" target="_blank" title="إنستجرام">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/01020008466" target="_blank" title="واتساب">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+         <a href="last.html">الرئيسية</a>
+        <a href="#about">عن الأكاديمية</a>
+        <a href="#branches">فروعنا</a>
+        <a href="#contact">تواصل معنا</a>
+        <a href="#faq">الأسئلة الشائعة</a>
+    </nav>
+
+    <!-- Main container -->
+
+
+
+<!-- قسم الأسئلة الشائعة -->
+<section id="faq" class="faq">
+    <a href="faq.html" class="faq-icon">
+        <i class="fas fa-question-circle"></i>
+    </a>
+    <h2>الأسئلة الشائعة</h2>
+    <div class="faq-item">
+        <h3>فروع الأكاديمية؟ \ المكان فين؟</h3>
+        <p>الأكاديمية تضم أكثر من 50 فرعًا، يمكنك اختيار الفرع المناسب لك من <a href="#branches">هنا</a>.</p>
+    </div>
+    <div class="faq-item">
+        <h3>ما هي مواعيد التدريبات؟</h3>
+        <p>تختلف مواعيد التدريبات حسب كل فرع. يرجى اختيار الفرع الأقرب لك لمعرفة المواعيد المحددة لكل فئة عمرية.</p>
+    </div>
+    <div class="faq-item">
+        <h3>ممكن تفاصيل؟</h3>
+        <p>يرجى توضيح الاستفسار بخصوص فرع معين لمساعدتك بشكل أفضل.</p>
+    </div>
+    <div class="faq-item">
+        <h3>الأكاديمية تقبل من سن كام؟</h3>
+        <p>الأكاديمية تقبل من مواليد 2005 حتى مواليد 2020.</p>
+    </div>
+    <div class="faq-item">
+        <h3>طريقة الاشتراك؟</h3>
+        <p>توجه إلى الفرع المناسب للاشتراك في مواعيد وأيام التدريبات المحددة.</p>
+    </div>
+    <div class="faq-item">
+        <h3>بكام الاشتراك و الاشتراك سنوي ولا شهري؟</h3>
+        <p>تختلف رسوم الاشتراك حسب كل فرع. يوجد اشتراك شهري وسنوي وربع ونصف سنوي في بعض الفروع.</p>
+    </div>
+    <div class="faq-item">
+        <h3>الأكاديمية فيها تسويق محلي ودولي؟</h3>
+        <p>لا يوجد تسويق خارجي أو احتراف حاليًا.</p>
+    </div>
+    <div class="faq-item">
+        <h3>إيه الفرق بين أكاديمية أندرلخت وأي أكاديمية تانية؟</h3>
+        <p>أكاديمية أندرلخت تتميز بالشراكة المباشرة مع نادي أندرلخت البلجيكي، وبرامج تدريبية متقدمة تحت إشراف مدربين ذوي خبرة عالمية مثل الكابتن هادي خشبة، والكابتن أحمد حسن، والكابتن محمد يوسف.</p>
+    </div>
+    <div class="faq-item">
+        <h3>كابتن هادي خشبة، كابتن أحمد حسن، وكابتن محمد يوسف بيدربوا فعلاً؟</h3>
+        <p>الكباتن لا يقومون بالتدريب مباشرةً، لكنهم يشرفون ويتابعون كل الفروع بصفة دورية.</p>
+    </div>
+    <div class="faq-item">
+        <h3>الأكاديمية تابعة لكابتن هادي خشبة، كابتن أحمد حسن، وكابتن محمد يوسف فعلاً؟ وإيه يضمن لي إنها تابعة ليهم؟</h3>
+        <p>نعم، الأكاديمية تعمل تحت إشراف مباشر من هؤلاء النجوم الكبار. يمكنك التأكد من صحة هذه المعلومات من خلال زيارة الصفحات الرسمية الخاصة بالكباتن.</p>
+    </div>
+    <div class="faq-item">
+        <h3>الأخوات والأقارب والأصدقاء ليهم خصم؟</h3>
+        <p>نعم، الأخوات يحصلون على خصم 5% لكل واحد. لا يتم تقديم خصم للأقارب أو الأصدقاء حاليًا.</p>
+    </div>
+    <div class="faq-item">
+        <h3>الأوراق المطلوبة للتسجيل أو الاشتراك؟</h3>
+        <p>لا يوجد أي أوراق مطلوبة للاشتراك، فقط تسجيل بعض البيانات في الفرع أثناء الاشتراك.</p>
+    </div>
+    <div class="faq-item">
+        <h3>أنا مليت الاستمارة، أعمل إيه بعد كده؟</h3>
+        <p>توجه إلى الفرع المناسب للاشتراك في مواعيد وأيام التدريبات المحددة. يمكنك الذهاب في أي وقت خلال مواعيد التدريب المحددة.</p>
+    </div>
+    <div class="faq-item">
+        <h3>ابني لابس نظارة، ينفع يشترك ولا لا؟</h3>
+        <p>نعم، لا يوجد أي مشكلة في ارتداء النظارة أثناء التدريبات.</p>
+    </div>
+    <div class="faq-item">
+        <h3>ينفع الاشتراك نص شهر؟ \ لو اشتركت دلوقتي هدفع يوم 15 من كل شهر؟</h3>
+        <p>نعم، يمكنك الاشتراك نصف شهر. تحصيل الاشتراك يكون من يوم 1 إلى يوم 10 من كل شهر.</p>
+    </div>
+    <div class="faq-item">
+        <h3>لو اتقبلت في الاختبارات، هيحصل إيه بعد كده؟</h3>
+        <p>سوف يتم تسجيلك في الدوري الرسمي التابع للاتحاد المصري لكرة القدم.</p>
+    </div>
+    <div class="faq-item">
+        <h3>هيحصل إيه بعد التدريب في الأكاديمية، وهل هيفضل طول عمره بيتدرب؟</h3>
+        <p>بعد التدريب في الأكاديمية، يمكن أن يتم تقديم اللاعبين للاختبارات للالتحاق بنوادي للمشاركة في مسابقات الدوري الرسمي التابع للاتحاد المصري لكرة القدم.</p>
+    </div>
+    <div class="faq-item">
+        <h3>مين المدربين اللي هيدربوا ابني في الفرع؟</h3>
+        <p>تختلف الفروع في المدربين. يمكنك الحصول على تفاصيل حول المدربين من خلال زيارة الفرع وحضور أول جلسة تدريب مجانًا.</p>
+    </div>
+    <div class="faq-item">
+        <h3>الاختبارات دي بتاعت دوري اتحاد الكرة ولا للاشتراك في الأكاديمية؟</h3>
+        <p>الاختبارات خاصة بالانضمام للنادي للمشاركة في مسابقات الدوري الرسمي التابع للاتحاد المصري لكرة القدم، والاشتراك في الأكاديمية يتم بدون اختبارات.</p>
+    </div>
+    <div class="faq-item">
+        <h3>في بطولات ودية بتتعمل ولا الدوري الرسمي فقط؟</h3>
+        <p>تقوم بعض الأكاديميات بتنظيم بطولات ودية بالإضافة إلى المشاركة في الدوري الرسمي.</p>
+    </div>
+    <div class="faq-item">
+        <h3>الأكاديمية مستمرة ولا في الصيف فقط؟</h3>
+        <p>الأكاديمية مستمرة صيفًا وشتاءً.</p>
+    </div>
+    <div class="faq-item">
+        <h3>مدة التدريب؟</h3>
+        <p>تختلف مدة التدريب حسب كل فرع، ولكن في الغالب تتراوح مدة التدريب بين ساعة إلى ساعة ونصف.</p>
+    </div>
+    <div class="faq-item">
+        <h3>ينفع أحضر يومين في الأسبوع بدل 3 أيام ونخفض الاشتراك؟</h3>
+        <p>الاشتراك يكون 3 أيام أسبوعيًا، يمكنك حضور يومين فقط ولكن بدون تخفيض. يُفضل حضور كل التمارين لأقصى استفادة ممكنة.</p>
+    </div>
+    <div class="faq-item">
+        <h3>أثناء التدريبات هل بيكون في كشافين لاكتشاف المواهب؟ \ هل بعد الاشتراك ممكن أروح نادي كبير؟</h3>
+        <p>بعد التدريب في الأكاديمية، يمكن أن يتم تقديم اللاعبين للاختبارات للالتحاق بنوادي للمشاركة في مسابقات الدوري الرسمي التابع للاتحاد المصري لكرة القدم.</p>
+    </div>
+    <div class="faq-item">
+        <h3>كل الأعمار في نفس التوقيت؟</h3>
+        <p>التدريبات مقسمة حسب المواليد. كل مواليد في مجموعة منفصلة، وبعض الفروع مواعيد التدريبات واحدة لكل المواليد ولكن يتم تقسيمهم داخل الملعب.</p>
+    </div>
+    <div class="faq-item">
+        <h3>كم عدد اللاعبين في المجموعة في التدريب الواحد؟</h3>
+        <p>15 لاعب كحد أقصى في كل مجموعة تدريبية.</p>
+    </div>
+    <div class="faq-item">
+        <h3>هل الأكاديمية/النادي استثماري؟</h3>
+        <p>نعم.</p>
+    </div>
+    <div class="faq-item">
+        <h3>ينفع أنقل الاشتراك من فرع لفرع بنفس الاشتراك؟</h3>
+        <p>يمكن التحويل بين فروع الأكاديمية في نهاية الشهر فقط.</p>
+    </div>
+    <div class="faq-item">
+        <h3>هتفتحوا فرع في الشرقية، شبرا، الخ إمتى؟</h3>
+        <p>قريب إن شاء الله. سيتم إبلاغ الإدارة بذلك.</p>
+    </div>
+    <div class="faq-item">
+        <h3>أنا عندي 70 سنة وعايز أتدرب؟ \ أنا مواليد 1980 وعايز أتدرب؟</h3>
+        <p>غير متاح للأسف، التدريبات متاحة فقط لمواليد 2005 حتى مواليد 2020.</p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- الجزء السفلي من الصفحة -->
+<footer class="footer">
+    <p>© 2024 أكاديمية أندرلخت. جميع الحقوق محفوظة.</p>
+    <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100093608220798&mibextid=JRoKGi" target="_blank" title="فيسبوك">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/anderlecht.academy?igsh=MWxoYWpqbWcza3M2Mg%3D%3D&utm_source=qr" target="_blank" title="إنستجرام">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/01020008466" target="_blank" title="واتساب">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+    </div>
+</footer>
+</body>
+</html>
+
